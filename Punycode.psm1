@@ -3,7 +3,15 @@ function ConvertTo-Punycode {
 		[string]$String
 	)
 	$idn = [System.Globalization.IdnMapping]::new()
-	$idn.GetAscii($String)
+	return $idn.GetAscii($String)
 }
 
-Export-ModuleMember -Function ConvertTo-Punycode
+function ConvertFrom-Punycode {
+	param (
+		[string]$String
+	)
+	$idn = [System.Globalization.IdnMapping]::new()
+	return $idn.GetUnicode($String)
+}
+
+Export-ModuleMember -Function @('ConvertTo-Punycode', 'ConvertFrom-Punycode')
