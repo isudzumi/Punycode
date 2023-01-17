@@ -30,7 +30,7 @@ CompanyName = ''
 Copyright = '(c) isudzumi. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = ''
+Description = 'Punycode converter for PowerShell'
 
 # Minimum version of the PowerShell engine required by this module
 # PowerShellVersion = ''
